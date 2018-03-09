@@ -1,0 +1,2593 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2017 ThemeMarket
+/*	Author: ThemeMarket
+/*	This file is made for CURRENT TEMPLATE
+
+	01) BITMARKET BASE
+	02) BITMARKET HEADER
+	03) BITMARKET MOBILE MENU
+	04) BITMARKET HAMBURGER
+	05) BITMARKET CONTENT
+	06) BITMARKET SECTION TITLE HOLDER
+	07) BITMARKET SERVICES
+	08) BITMARKET COUNTER
+	09) BITMARKET PRICING
+	10) BITMARKET ABOUT
+	11) BITMARKET PORTFOLIO
+	12) BITMARKET JOURNAL
+	13) BITMARKET PARTNERS
+	14) BITMARKET CONTACT
+	15) BITMARKET FOOTER
+	16) BITMARKET TO TOP
+	17) BITMARKET MEDIA QUERIES (FOR SMALL DEVICES)
+
+/*---------------------------------------------------*/
+/*	01) BITMARKET BASE
+/*---------------------------------------------------*/
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Open Sans";
+	font-size: 13px;
+	line-height: 1.5;
+	letter-spacing: -0.5px;
+	font-weight: 600;
+}
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+body .cryptonatorwidget{
+	display: none;
+}
+.hideforanimation{
+	opacity: 0;
+	visibility: hidden;
+}
+.bitmarket_tm_wrapper_all,
+.bitmarket_tm_section{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */ 
+}
+.bitmarket_tm_wrapper_all .cryptonatorwidget{display: block;}
+.bitmarket_tm_live_wrap{
+	position: fixed;
+	top: 50%;
+	transform: translateX(100%) translateY(-50%) translateZ(0);
+	right: 0px;
+	z-index: 999;
+	background-color: #0a1325;
+	border: 1px solid rgba(255,255,255,.2) !important;
+	
+	-webkit-transition: all .4s ease;
+	   -moz-transition: all .4s ease;
+	    -ms-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+.bitmarket_tm_live_wrap .inner{position: relative;}
+.bitmarket_tm_live_wrap.opened{transform: translateX(0px) translateY(-50%) translateZ(0);}
+.bitmarket_tm_live_wrap .button{
+	position: absolute;
+    top: 0px;
+	bottom: 0px;
+    right: 100%;
+    z-index: 11;
+	background-color: #ffb426;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid rgba(255,255,255,.2);
+}	
+.bitmarket_tm_live_wrap .button .in{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.bitmarket_tm_live_wrap .button span{
+	display: block;
+	padding-top: 5px;
+}
+.bitmarket_tm_live_wrap .button a{
+	text-decoration: none;
+	color: #BC3F06;
+	font-weight: 600;
+	font-family: "Montserrat";
+	display: block;
+}
+.bitmarket_tm_live_wrap .svg{
+	width: 25px;
+	height: 25px;
+	color: #A44105;
+	position: relative;
+	top: 2px;
+}
+.bitmarket_tm_live_wrap table td{border: none !important;}
+.bitmarket_tm_live_wrap table tr{border: none !important;}
+.bitmarket_tm_live_wrap table{
+	border: none !important;
+	margin-bottom: 0px;
+}
+.bitmarket_tm_live_wrap .cryptonatorwidget > div{display: none;}
+.bitmarket_tm_live_wrap .cryptonatorwidget{
+	border: none!important;
+	border-radius: 0px !important;
+}
+.bitmarket_tm_live_wrap table td input{
+	line-height: 1.5 !important;
+	width: auto !important;
+	font-family: "Montserrat" !important;
+	border-radius: 3px !important;
+	color: #000000 !important;
+}
+.bitmarket_tm_live_wrap table td input:focus{
+	outline: none !important;
+	background-color: #fff !important;
+}
+.bitmarket_tm_live_wrap table td select{
+	height: 41.5px !important;
+	border: none !important;
+	font-family: "Montserrat" !important;
+	border-radius: 3px !important;
+}
+.bitmarket_tm_preloader{
+	width: 100%;
+	height: 100%;
+	background-color: #131b36;
+	position: fixed;
+	z-index: 9999;
+}
+.bitmarket_tm_preloader .preloader_inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.bitmarket_tm_preloader.remove{display: none;}
+
+/*---------------------------------------------------*/
+/*	02) BITMARKET HEADER
+/*---------------------------------------------------*/
+
+.bitmarket_tm_header{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+	
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	    -ms-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_header.scroll{
+	background-color: rgba(255,255,255,1);
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .menu > ul > li a{color: #000;}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .menu > ul > li a:hover{color: #ffb426;}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li a{color: #000;}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li a:hover{color: #ffb426;}
+.bitmarket_tm_navigation_wrap,
+.bitmarket_tm_navigation_wrap .navigation_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_navigation_wrap{
+	min-height: 45px;	
+	line-height: 45px;
+	padding: 35px 0px;
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap{padding: 24px 0px;}
+.bitmarket_tm_navigation_wrap .navigation_inner{position: relative;}
+.bitmarket_tm_navigation_wrap .logo{
+	position: absolute;
+	left: 0px;	
+	top: -1px;
+}
+.bitmarket_tm_navigation_wrap .logo .dark_logo{display: inline-block;}
+.bitmarket_tm_navigation_wrap .logo .light_logo{display: none;}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .logo .dark_logo{display: none;}
+.bitmarket_tm_header.scroll .bitmarket_tm_navigation_wrap .logo .light_logo{display: inline-block;}
+.bitmarket_tm_navigation_wrap .nav_list_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	text-align: center;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_navigation_wrap .menu > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_navigation_wrap .menu > ul > li{
+	margin: 0px 30px 0px 0px;
+	display:inline-block; 
+}
+.bitmarket_tm_navigation_wrap .menu > ul > li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: "Montserrat";
+	font-size: 16px;
+	font-weight: 600;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_navigation_wrap .menu > ul > li a:hover{color: #ffb426;}
+.bitmarket_tm_navigation_wrap .social_icons_wrap{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.bitmarket_tm_navigation_wrap .social_icons_wrap > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li{
+	margin: 0px 10px 0px 0px;
+	display: inline-block;
+}
+.bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li:last-child{margin-right: 0px;}
+.bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_navigation_wrap .social_icons_wrap > ul > li a:hover{color: #ffb426;}
+
+/*---------------------------------------------------*/
+/*	03) BITMARKET MOBILE MENU
+/*---------------------------------------------------*/
+
+.bitmarket_tm_mobile_menu_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	padding: 50px 20px;
+	display: none;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	border-top: 1px solid rgba(0,0,0,.2);
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */	
+}
+.bitmarket_tm_mobile_menu_wrap .mob_menu{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_mobile_menu_wrap .mob_menu > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_mobile_menu_wrap .mob_menu > ul > li{margin: 0px 0px 15px 0px;}
+.bitmarket_tm_mobile_menu_wrap .mob_menu > ul > li:last-child{margin-bottom: 0px;}
+.bitmarket_tm_mobile_menu_wrap .mob_menu > ul > li a{
+	text-decoration: none;
+	color: #000;
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 20px;
+}
+
+/*---------------------------------------------------*/
+/*	04) BITMARKET HAMBURGER
+/*---------------------------------------------------*/
+
+.bitmarket_tm_trigger{
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	display: none;
+}
+.bitmarket_tm_trigger .hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.bitmarket_tm_trigger .hamburger-box {
+  width: 30px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+}
+.bitmarket_tm_trigger .hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.bitmarket_tm_trigger .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+	
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+.bitmarket_tm_trigger .hamburger-inner::before,
+.bitmarket_tm_trigger .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.bitmarket_tm_trigger .hamburger-inner::before{top: -8px;}
+.bitmarket_tm_trigger .hamburger-inner::after{ bottom: -10px;}
+.bitmarket_tm_trigger .hamburger--collapse-r .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.bitmarket_tm_trigger .hamburger--collapse-r .hamburger-inner::after{
+    top: -16px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.bitmarket_tm_trigger .hamburger--collapse-r .hamburger-inner::before{
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.bitmarket_tm_trigger .hamburger--collapse-r.is-active .hamburger-inner{
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.bitmarket_tm_trigger .hamburger--collapse-r.is-active .hamburger-inner::after{
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.bitmarket_tm_trigger .hamburger--collapse-r.is-active .hamburger-inner::before{
+    top: 0;
+    transform: rotate(90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.bitmarket_tm_trigger .hamburger{
+	padding: 0px;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.bitmarket_tm_trigger .hamburger-box{display: block;}
+.bitmarket_tm_trigger .hamburger .hamburger-inner::before,
+.bitmarket_tm_trigger .hamburger .hamburger-inner::after,
+.bitmarket_tm_trigger .hamburger .hamburger-inner{
+	background-color: #000;
+	width: 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+
+/*---------------------------------------------------*/
+/*	05) BITMARKET CONTENT
+/*---------------------------------------------------*/
+
+.bitmarket_tm_hero_header{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .bg_wrap{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 10;
+}
+.bitmarket_tm_universal_box_wrap .overlay_image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 15;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.bitmarket_tm_universal_box_wrap .overlay_video{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 15;
+	overflow: hidden;
+}
+.bitmarket_tm_universal_box_wrap .overlay_video video{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+}
+.bitmarket_tm_universal_box_wrap .overlay_color{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 20;
+}
+.bitmarket_tm_universal_box_wrap .content{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	z-index: 25;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .overlay_color.hero{background-color: rgba(255,255,255,1.00);}
+.bitmarket_tm_universal_box_wrap .content.hero{height: 100vh;}
+.bitmarket_tm_universal_box_wrap .flexslider .slides li{
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bitmarket_tm_universal_box_wrap .flexslider .slides li:nth-child(1){background-image: url(../images/slider/11.jpg);}
+.bitmarket_tm_universal_box_wrap .flexslider .slides li:nth-child(2){background-image: url(../images/slider/12.jpg);}
+.bitmarket_tm_universal_box_wrap .flexslider .slides li:nth-child(3){background-image: url(../images/slider/13.jpg);}
+.bitmarket_tm_universal_box_wrap .flexslider .flex-direction-nav{display: none;}
+.bitmarket_tm_universal_box_wrap .flexslider .overlay{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 5;
+	background-color: rgba(0,0,0,.4);
+}
+.bitmarket_tm_universal_box_wrap .flexslider .title_slide_wrap{
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+}
+.bitmarket_tm_universal_box_wrap .flexslider .title_slide_wrap h3{
+	margin: 0px;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 60px;
+	color: #fff;
+	line-height: 0.9;
+	margin-bottom: 30px;
+	letter-spacing: -2px !important;
+	
+	transform: translateY(50px);
+	transition-delay: 0.6s;
+	transition-duration: 1s;
+	opacity: 0;
+}
+.bitmarket_tm_universal_box_wrap .flexslider .title_slide_wrap p{
+	color: #eee;
+	font-weight: 500;
+	font-family: "Montserrat";
+	font-size: 20px;
+	line-height: 1.3;
+	margin-bottom: 33px;
+	
+	transform: translateY(20px);
+	transition-delay: 1s;
+	transition-duration: 1s;
+	opacity: 0;
+}
+.bitmarket_tm_universal_box_wrap .flexslider .button{
+	text-decoration: none;
+	color: #fff;
+	background-color: #BC3F06;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding: 13px 25px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	
+	margin-right: 20px;
+	opacity: 0;
+	transition-delay: 1.5s;
+	transition-duration: 1s;
+	transition-property: transform, opacity;
+}
+.bitmarket_tm_universal_box_wrap .flexslider .button:hover{
+	background-color: #fff;
+	color: #0a1325;
+}
+.bitmarket_tm_universal_box_wrap .flexslider li.flex-active-slide .title_slide_wrap h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.bitmarket_tm_universal_box_wrap .flexslider li.flex-active-slide .title_slide_wrap p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.bitmarket_tm_universal_box_wrap .flexslider li.flex-active-slide .button{opacity: 1;}
+.bitmarket_tm_universal_box_wrap .flexslider li .button:first-of-type{transform: translateX(-30px);}
+.bitmarket_tm_universal_box_wrap .flexslider li.flex-active-slide .button:first-of-type{transform: translateX(0px);}
+.bitmarket_tm_universal_box_wrap .flexslider li .button:last-of-type{transform: translateX(30px);}
+.bitmarket_tm_universal_box_wrap .flexslider li.flex-active-slide .button:last-of-type{transform: translateX(0px);}
+.bitmarket_tm_get_quote_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #f9b016;
+	padding: 15px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_get_quote_wrap .text_quote{
+	float: left;
+	position: relative;
+	top: 11px;
+}
+.bitmarket_tm_get_quote_wrap .text_quote p{
+	color: #BC3F06;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 20px;
+	line-height: 1.3;
+}
+.bitmarket_tm_get_quote_wrap .quote_button{float: right;}
+.bitmarket_tm_get_quote_wrap .quote_button a{
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #BC3F06;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding: 13px 25px;
+	border-radius: 3px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_get_quote_wrap .quote_button a:hover{
+	color: #BC3F06;
+	background-color: #fff;
+}
+.bitmarket_tm_attachment_consult_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 100px 0px 70px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_list_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_list_wrap > ul.total{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_list_wrap > ul.total > li{
+	margin: 0px;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.bitmarket_tm_list_wrap[data-column="1"] ul.total > li{width: 100%;}
+.bitmarket_tm_list_wrap[data-column="2"] ul.total > li{width: 50%;}
+.bitmarket_tm_list_wrap[data-column="3"] ul.total > li{width: 33.3333%;}
+.bitmarket_tm_list_wrap[data-column="4"] ul.total > li{width: 25%;}
+.bitmarket_tm_list_wrap[data-column="5"] ul.total > li{width: 20%;}
+.bitmarket_tm_list_wrap[data-space="0"] ul.total{margin-left: 0px;}
+.bitmarket_tm_list_wrap[data-space="1"] ul.total{margin-left: 1px;}
+.bitmarket_tm_list_wrap[data-space="2"] ul.total{margin-left: 2px;}
+.bitmarket_tm_list_wrap[data-space="3"] ul.total{margin-left: 3px;}
+.bitmarket_tm_list_wrap[data-space="4"] ul.total{margin-left: 4px;}
+.bitmarket_tm_list_wrap[data-space="5"] ul.total{margin-left: 5px;}
+.bitmarket_tm_list_wrap[data-space="10"] ul.total{margin-left: -10px;}
+.bitmarket_tm_list_wrap[data-space="20"] ul.total{margin-left: -20px;}
+.bitmarket_tm_list_wrap[data-space="30"] ul.total{margin-left: -30px;}
+.bitmarket_tm_list_wrap[data-space="40"] ul.total{margin-left: -40px;}
+.bitmarket_tm_list_wrap[data-space="50"] ul.total{margin-left: -50px;}
+.bitmarket_tm_list_wrap[data-space="60"] ul.total{margin-left: -60px;}
+.bitmarket_tm_list_wrap[data-space="70"] ul.total{margin-left: -70px;}
+.bitmarket_tm_list_wrap[data-space="80"] ul.total{margin-left: -80px;}
+.bitmarket_tm_list_wrap[data-space="0"] ul.total > li{padding: 0px;}
+.bitmarket_tm_list_wrap[data-space="1"] ul.total > li{padding-left: 1px; margin-bottom: 1px;}
+.bitmarket_tm_list_wrap[data-space="2"] ul.total > li{padding-left: 2px; margin-bottom: 2px;}
+.bitmarket_tm_list_wrap[data-space="3"] ul.total > li{padding-left: 3px; margin-bottom: 3px;}
+.bitmarket_tm_list_wrap[data-space="4"] ul.total > li{padding-left: 4px; margin-bottom: 4px;}
+.bitmarket_tm_list_wrap[data-space="5"] ul.total > li{padding-left: 5px; margin-bottom: 5px;}
+.bitmarket_tm_list_wrap[data-space="10"] ul.total > li{padding-left: 10px; margin-bottom: 10px;}
+.bitmarket_tm_list_wrap[data-space="20"] ul.total > li{padding-left: 20px; margin-bottom: 20px;}
+.bitmarket_tm_list_wrap[data-space="30"] ul.total > li{padding-left: 30px; margin-bottom: 30px;}
+.bitmarket_tm_list_wrap[data-space="40"] ul.total > li{padding-left: 40px; margin-bottom: 40px;}
+.bitmarket_tm_list_wrap[data-space="50"] ul.total > li{padding-left: 50px; margin-bottom: 50px;}
+.bitmarket_tm_list_wrap[data-space="60"] ul.total > li{padding-left: 60px; margin-bottom: 60px;}
+.bitmarket_tm_list_wrap[data-space="70"] ul.total > li{padding-left: 70px; margin-bottom: 70px;}
+.bitmarket_tm_list_wrap[data-space="80"] ul.total > li{padding-left: 80px; margin-bottom: 80px;}
+
+.bitmarket_tm_list_wrap .overlay_text{
+	position: absolute;
+	top: 62%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 35px 60px;
+	text-align: center;
+	
+	background: #F87300;
+	background: -webkit-linear-gradient(200deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(200deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(200deg, #F87300, #BC3F06);
+	background: linear-gradient(200deg, #F87300, #BC3F06);
+	
+	-webkit-transition: all .4s ease;
+	   -moz-transition: all .4s ease;
+	    -ms-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list .image_holder{position: relative;}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.first{background-image: url(../images/services/6.jpg);}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.second{background-image: url(../images/services/7.jpg);}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.third{background-image: url(../images/services/8.jpg);}
+.bitmarket_tm_attachment_consult_wrap.another .bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.first{background-image: url(../images/services/11.jpg);}
+.bitmarket_tm_attachment_consult_wrap.another .bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.second{background-image: url(../images/services/10.jpg);}
+.bitmarket_tm_attachment_consult_wrap.another .bitmarket_tm_list_wrap > ul.total > li .inner_list .absolute_image.third{background-image: url(../images/services/9.jpg);}
+.bitmarket_tm_list_wrap > ul.total > li .inner_list:hover .overlay_text{top: 0px;}
+.bitmarket_tm_list_wrap .overlay_text .title_holder{margin-bottom: 30px;}
+.bitmarket_tm_list_wrap .overlay_text .title_holder span{
+	color: #FFFFFF;
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 19px;
+}
+.bitmarket_tm_list_wrap .overlay_text .title_holder span i{
+	padding-left: 15px;
+	font-size: 20px;
+	color: #ffb426;
+}
+.bitmarket_tm_list_wrap .overlay_text .definition{margin-bottom: 30px;}
+.bitmarket_tm_list_wrap .overlay_text .definition p{
+	color: #FFFFFF;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.bitmarket_tm_list_wrap .overlay_text .read_more a{
+	text-decoration: none;
+	color: #ffb426;
+	font-weight: 600;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_list_wrap .overlay_text .read_more a:hover{color: #fff;}
+
+/*---------------------------------------------------*/
+/*	06) BITMARKET SECTION TITLE HOLDER
+/*---------------------------------------------------*/
+
+.bitmarket_tm_section_title_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_section_title_wrap span{
+    font-weight: 700;
+    font-family: "Montserrat";
+    font-size: 50px;
+    color: #CC5302;
+    line-height: 0.9;
+	position: relative;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_section_title_wrap span:before{
+	position: absolute;
+	content: "";
+	width: 45px;
+	height: 5px;
+	border-radius: 3px;
+	background-color: #ffb426;
+	bottom: -15px;
+	left: 50%;
+	margin-left: -20px;
+}
+
+/*---------------------------------------------------*/
+/*	07) BITMARKET SERVICES
+/*---------------------------------------------------*/
+.bitmarket_tm_services_wrap .bitmarket_tm_section_title_wrap span{color: #fff;}
+.bitmarket_tm_services_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 275px 0px 70px 0px;
+	text-align: center;
+	position: relative;
+	
+	background: #F87300;
+	background: -webkit-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(270deg, #F87300, #BC3F06);
+	background: linear-gradient(270deg, #F87300, #BC3F06);
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_services_wrap .service_list_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 35px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_services_wrap .service_list_wrap .title_icon{
+	margin: 0px auto;
+	position: relative;
+	margin-bottom: 10px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_services_wrap .service_list_wrap .title_icon .svg{
+	display: inline-block;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_services_wrap .title_holder span{
+	color: #5a4685;
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 19px;
+	margin-bottom: 6px;
+	display: inline-block;
+}
+.bitmarket_tm_services_wrap .title_holder span a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_services_wrap .title_holder span a:hover{color: #ffb426;}
+.bitmarket_tm_services_wrap .definition p{color: #eee;}
+
+/*---------------------------------------------------*/
+/*	08) BITMARKET COUNTER
+/*---------------------------------------------------*/
+
+.bitmarket_tm_counter_wrap_all{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .overlay_image.counter{background-image: url(../images/slider/17.jpg);}
+.bitmarket_tm_universal_box_wrap .overlay_color.counter{background-color: rgba(0,0,0,.6);}
+.bitmarket_tm_universal_box_wrap .content.counter{padding: 100px 0px 70px 0px;}
+.bitmarket_tm_universal_box_wrap .counter_inner_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .counter_inner_wrap .title_counter{margin-bottom: 63px;}
+.bitmarket_tm_universal_box_wrap .counter_inner_wrap .title_counter span{
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	letter-spacing: -2px;
+	color: #fff;
+}
+.bitmarket_tm_universal_box_wrap .counter_inner_wrap .title_counter .first{color: #ffb426;}
+.bitmarket_tm_counter_list{
+	list-style-type:none;
+	width:100%;
+	margin: 0px;
+	
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+	perspective: 500px;
+}
+.bitmarket_tm_counter_list li{
+	width:20%;
+	float:left;
+	text-align:center;
+	margin: 0px 0px 30px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_counter_list li h3{
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	color: #fff;
+	margin-bottom: 3px;
+}
+.bitmarket_tm_counter_list li span{
+	color:#ffb426;
+	font-weight:600;
+	font-size: 22px;
+}
+
+.bitmarket_tm_counter_wrap[data-col="1"] .bitmarket_tm_counter_list li{width:100%;}
+.bitmarket_tm_counter_wrap[data-col="2"] .bitmarket_tm_counter_list li{width:50%;}
+.bitmarket_tm_counter_wrap[data-col="3"] .bitmarket_tm_counter_list li{width:33.3333%;}
+.bitmarket_tm_counter_wrap[data-col="4"] .bitmarket_tm_counter_list li{width:25%;}
+.bitmarket_tm_counter_wrap[data-col="5"] .bitmarket_tm_counter_list li{width:20%;}
+.bitmarket_tm_counter_wrap[data-col="6"] .bitmarket_tm_counter_list li{width:16.6666%;}
+
+.bitmarket_tm_section[data-skin="dark"] .bitmarket_tm_counter_list li i{color:#ddd;}
+
+/*---------------------------------------------------*/
+/*	09) BITMARKET PRICING
+/*---------------------------------------------------*/
+
+.bitmarket_tm_pricing_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_pricing_wrap .bitcoin_list_wrap{
+	float: left;
+	width: 48.5%;
+	height: auto;
+	clear: both;
+	transform: translateZ(0);
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */ 
+}
+.bitmarket_tm_pricing_wrap .bitcoin_news_wrap{
+	width: 48.5%;
+	float: right;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */ 
+}
+.bitmarket_tm_pricing_wrap .news_title{
+	text-align: center;
+	padding-top: 10px;
+}
+.bitmarket_tm_pricing_wrap .news_title span{
+	font-family: "Montserrat";
+	font-size: 28px;
+	font-weight: 700;
+	color: #333;
+	text-transform: uppercase;
+	position: relative;
+	top: 40px;
+}
+.bitmarket_tm_pricing_wrap .news_title span a{
+	text-decoration: none;
+	color: #333;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_pricing_wrap .news_title span a:hover{color: #000000;}
+.bitmarket_tm_pricing_wrap .btcwdgt{
+	margin: 0 auto !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+	box-shadow: none !important;
+}
+.bitmarket_tm_pricing_wrap .btcwdgt-headlines .btcwdgt-footer a.embed{
+	display: none !important;
+}
+.bitmarket_tm_pricing_wrap .btcwdgt .btcwdgt-footer a.logo{display: none !important;}
+
+/*---------------------------------------------------*/
+/*	10) BITMARKET ABOUT
+/*---------------------------------------------------*/
+
+.bitmarket_tm_about_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	background-color: #BC3F06;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_about_wrap .left_box{
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	height: 100%;
+	background-image: url(../images/slider/14.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.bitmarket_tm_about_wrap .left_box .overlay{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(0,0,0,.2);
+	z-index: 10;
+}
+.bitmarket_tm_about_wrap .right_box{
+	width: 50%;
+	float: right;
+	position: relative;
+	background-color: #BC3F06;
+}
+.bitmarket_tm_about_wrap .right_box .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 70px 70px 45px 70px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_about_wrap .right_box .title_about_inner{margin-bottom: 30px;}
+.bitmarket_tm_about_wrap .right_box .title_about_inner .first{
+	color: #ffb426;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: block;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_about_wrap .right_box .title_about_inner .second{
+	color: #fff;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: block;
+}
+.bitmarket_tm_about_wrap .short_definition {
+	color: #eee;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+.bitmarket_tm_about_wrap .accordion_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_accordion {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	clear:both;
+	
+	-webkit-perspective:500px;
+	-moz-perspective:500px;
+	perspective:500px;
+}
+.bitmarket_tm_accordion .accordion_in {
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	margin-bottom:5px;
+}
+.bitmarket_tm_accordion .accordion_in .acc_head{
+	position: relative;
+	color:#fff;
+	padding: 20px 0px;
+	font-size: 14px;
+	font-weight:700;
+	display: block;
+	cursor: pointer;
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+.bitmarket_tm_accordion .accordion_in.acc_active .acc_head{border-bottom: 1px solid rgba(255,255,255,.2);}
+.bitmarket_tm_accordion .accordion_in .acc_content {
+	color: #eee;
+	padding: 30px 0px;
+}
+.bitmarket_tm_accordion .accordion_in .acc_content p{
+	font-size:13px;
+	margin-bottom:10px;
+}
+.bitmarket_tm_accordion .accordion_in.acc_active > .acc_content {display: block;}
+.bitmarket_tm_accordion .accordion_in .wow_effect{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	margin-top: -8px;
+	width: 16px;
+	height: 16px;
+}
+.bitmarket_tm_accordion .accordion_in .wow_effect:after{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 20px;
+}
+.bitmarket_tm_accordion .accordion_in .wow_effect:after{content: '+';}
+.bitmarket_tm_accordion .accordion_in.acc_active .wow_effect:after{content: '-';}
+.bitmarket_tm_about_video_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .overlay_color.about_video{background-color: rgba(0,0,0,.4);}
+.bitmarket_tm_universal_box_wrap .content.about_video{padding: 150px 0px;}
+.bitmarket_tm_about_video_wrap .text_wrap span{
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: inline-block;
+	letter-spacing: -2px;	
+}
+.bitmarket_tm_about_video_wrap .text_wrap .first{color: #ffb426;padding-right: 14px;}
+.bitmarket_tm_about_video_wrap .text_wrap .second{color: #fff;}
+.bitmarket_tm_about_skills_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_about_skills_wrap .right_box{
+	position: absolute;
+	width: 50%;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	z-index: 10;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../images/slider/15.jpg);
+}
+.bitmarket_tm_about_skills_wrap .right_box .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.2);
+	z-index: 15;
+}
+.bitmarket_tm_about_skills_wrap .left_box{
+	width: 50%;
+	height: auto;
+	float: left;
+	position: relative;
+	background-color: #BC3F06;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_about_skills_wrap .left_box_inner_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 70px 70px 45px 70px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_about_skills_wrap .skill_title_wrap{margin-bottom: 30px;}
+.bitmarket_tm_about_skills_wrap .skill_title_wrap span{
+	color: #fff;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: inline-block;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_about_skills_wrap .skill_title_wrap .first{color: #ffb426;}
+.bitmarket_tm_about_skills_wrap .some_text{margin-bottom: 50px;}
+.bitmarket_tm_about_skills_wrap .some_text p{color: #eee;}
+.bitmarket_tm_about_skills_wrap .progress_bar_wrap_total{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_progress_wrap[data-size="big"] .bitmarket_progress .bitmarket_bar_bg{height:40px;}
+.bitmarket_progress_wrap[data-size="small"] .bitmarket_progress .bitmarket_bar_bg{height:5px;}
+
+.bitmarket_progress_wrap[data-round="a"] .bitmarket_progress .bitmarket_bar_bg,
+.bitmarket_progress_wrap[data-round="a"] .bitmarket_progress .bitmarket_bar{
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.bitmarket_progress_wrap[data-round="b"] .bitmarket_progress .bitmarket_bar_bg,
+.bitmarket_progress_wrap[data-round="b"] .bitmarket_progress .bitmarket_bar{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.bitmarket_progress_wrap[data-round="c"] .bitmarket_progress .bitmarket_bar_bg,
+.bitmarket_progress_wrap[data-round="c"] .bitmarket_progress .bitmarket_bar{
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:50px;
+}
+.bitmarket_progress{
+	width:100%;
+	margin-bottom:20px;
+}
+.bitmarket_progress > span{
+	margin:0px 0px 8px 0px;
+	width:100%;
+	display:block;
+	text-align:left;
+}
+.bitmarket_progress span.label{
+	font-size:13px;
+	font-weight:700;
+	color:#FFFFFF;
+}
+.bitmarket_progress span.number{
+	float:right;
+	font-size:13px;
+	color:#FFFFFF;
+	font-weight: 600;
+}
+.bitmarket_progress .bitmarket_bar_bg{
+	background:rgba(255,255,255,.2);
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:20px;
+}
+.bitmarket_progress .bitmarket_bar_bg .bitmarket_bar_wrap{
+	width:0px;
+	height:100%;
+}
+.bitmarket_progress .bitmarket_bar_bg .bitmarket_bar_wrap.open{
+	-webkit-animation: bitmarket_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    bitmarket_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         bitmarket_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+.bitmarket_progress .bitmarket_bar_bg .bitmarket_bar{
+	height:100%;
+	background:#333;
+	width:0px;
+	overflow:hidden;
+}
+.bitmarket_progress_wrap[data-strip="on"] .bitmarket_progress .bitmarket_bar{
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+	
+	-webkit-animation: bitmarket_bar_move 4s linear infinite;
+	-moz-animation: bitmarket_bar_move 4s linear infinite;
+	animation: bitmarket_bar_move 4s linear infinite;
+	background-size: 50px 50px;
+}
+@-webkit-keyframes bitmarket_bar_move {0%{background-position: 0 0;} 100% {background-position: 50px 50px;}}
+@-moz-keyframes bitmarket_bar_move {0%{background-position: 0 0;} 100% {background-position: 50px 50px;}}
+@keyframes bitmarket_bar_move {0%{background-position: 0 0;} 100% {background-position: 50px 50px;}}
+
+/*expand width animation*/
+@-webkit-keyframes bitmarket_expand {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes bitmarket_expand {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes bitmarket_expand {0%{ width:0%; } 100%{ width:100%; }}
+
+.bitmarket_section[data-skin="light"] .bitmarket_progress .bitmarket_bar_bg{background:#fff;}
+.bitmarket_section[data-skin="dark"] .bitmarket_progress .bitmarket_bar_bg{background:#000;}
+.bitmarket_section[data-skin="dark"] .bitmarket_progress span.label{color:#000;}
+
+.bitmarket_tm_universal_box_wrap .overlay_image.testimonial{background-image: url(../images/slider/10.jpg);}
+.bitmarket_tm_universal_box_wrap .overlay_color.testimonial{background-color: rgba(0,0,0,.7);}
+.bitmarket_tm_universal_box_wrap .content.testimonial{padding: 100px 0px;}
+.bitmarket_tm_testimonial_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 100px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_testimonial_wrap .testimonial_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	margin-bottom: 30px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_testimonial_wrap .testimonial_title span{
+	color: #fff;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: inline-block;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_testimonial_wrap .testimonial_title .first{color: #ffb426;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap{
+	max-width: 600px;
+	height: auto;
+	clear: both;
+	margin: 0px auto;
+	text-align: center;
+	cursor: e-resize;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap ul li{margin: 0px;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .definition{margin-bottom: 15px;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .definition p{color: #eee;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .rate{margin-bottom: 15px;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder span{display: inline-block;}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .name span{
+	position: relative;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: 700;
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .name span:before,
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .name span:after{
+	position: absolute;
+	content: "";
+	width: 13px;
+	height: 3px;
+	background-color: #ffb426;
+	top: 50%;
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .name span:before{
+	right: 100%;
+	margin-right: 10px;
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .name span:after{
+	left: 100%;
+	margin-left: 10px;
+}
+.bitmarket_tm_testimonial_wrap .main_testimonial_wrap .name_holder .job span{
+	color: #eee;
+	font-size: 12px;
+}
+.bitmarket_tm_team_wrap,
+.bitmarket_tm_team_wrap .team_list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_team_wrap .team_list_inner{position: relative;}
+.bitmarket_tm_team_wrap .team_list_inner .image_wrap{position: relative;}
+.bitmarket_tm_team_wrap .team_list_inner .image_wrap .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(15,35,131,.1);
+	z-index: 10;
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.bitmarket_tm_team_wrap .team_list_inner .social_team{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li{
+	margin: 0px 12px 0px 0px;
+	display: inline-block;
+	position: relative;
+	
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .7s ease;
+	   -moz-transition: all .7s ease;
+	    -ms-transition: all .7s ease;
+	     -o-transition: all .7s ease;
+	        transition: all .7s ease;
+}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li a:hover{color: #ffb426;}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li:first-child{right: 15px;bottom: 0px !important;}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li:last-child{left: 15px;top: 0px !important;}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li:nth-child(2n){top: 15px;}
+.bitmarket_tm_team_wrap .team_list_inner .social_team ul li:nth-child(2n+1){bottom: 15px;}
+
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .social_team ul li:first-child{right: 0px;}
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .social_team ul li:last-child{left: 0px;}
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .social_team ul li:nth-child(2n){top: 0px;}
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .social_team ul li:nth-child(2n+1){bottom: 0px;}
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .social_team ul li{
+	opacity: 1;
+	visibility: visible;
+}
+.bitmarket_tm_team_wrap .bitmarket_tm_list_wrap ul li.fn_item:hover .image_wrap .overlay{background-color: rgba(251,136,7,.5);}
+.bitmarket_tm_team_wrap .about_team_member{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	
+	background: #F87300;
+	background: -webkit-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(270deg, #F87300, #BC3F06);
+	background: linear-gradient(270deg, #F87300, #BC3F06);
+	
+	padding: 20px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_team_wrap .about_team_member .name_holder .name span{
+	position: relative;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+}
+.bitmarket_tm_team_wrap .about_team_member .name_holder .name span:before,
+.bitmarket_tm_team_wrap .about_team_member .name_holder .name span:after{
+	position: absolute;
+	content: "";
+	width: 13px;
+	height: 3px;
+	background-color: #ffb426;
+	top: 50%;
+}
+.bitmarket_tm_team_wrap .about_team_member .name_holder .name span:before{
+	right: 100%;
+	margin-right: 10px;
+}
+.bitmarket_tm_team_wrap .about_team_member .name_holder .name span:after{
+	left: 100%;
+	margin-left: 10px;
+}
+.bitmarket_tm_team_wrap .about_team_member .name_holder .job span{
+	color: #eee;
+	font-size: 12px;
+}
+
+/*---------------------------------------------------*/
+/*	11) BITMARKET PORTFOLIO
+/*---------------------------------------------------*/
+
+.bitmarket_tm_portfolio_wrap_all{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 70px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_portfolio_wrap{
+	width:100%;
+	clear:both;
+	z-index: 10;
+	position: relative;
+	padding: 0px 20px;
+	max-width: 2000px;
+	margin: 0px auto;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+/* PORTFOLIO FILTER */
+.bitmarket_tm_portfolio_filter{
+	width:100%;
+	height: auto;
+	text-align:center;
+	list-style-type:none;
+	margin: 0px 0px 65px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_portfolio_filter li{
+	display:inline-block;
+	margin:0px 20px 0px 0px;
+}
+.bitmarket_tm_portfolio_filter li:last-child{margin-right: 0px;}
+.bitmarket_tm_portfolio_filter li a{
+	text-decoration:none;
+	font-size:14px;
+	font-weight:700;
+	color:#fff;
+	padding: 10px 20px;
+	border-radius: 3px;
+	display: inline-block;
+	margin-bottom: 10px;
+	
+	background: #F87300;
+	background: -webkit-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(270deg, #F87300, #BC3F06);
+	background: linear-gradient(270deg, #F87300, #BC3F06);
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.bitmarket_tm_portfolio_filter li a:hover{
+	background: #F87300;
+	background: -webkit-linear-gradient(135deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(135deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(135deg, #F87300, #BC3F06);
+	background: linear-gradient(270135deg, #F87300, #BC3F06);
+}
+
+/* PORTFOLIO LIST */
+
+.bitmarket_tm_portfolio_list{
+	list-style-type:none;
+	margin: 0px 0px 0px -30px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_portfolio_list > li{
+	width:25%;
+	float:left;
+	position:relative;
+	margin: 0px 0px 30px 0px;
+	padding-left: 30px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_portfolio_list .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_portfolio_list .list_inner .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	    -ms-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio{
+	position: absolute;
+	top: 55%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio .first{
+	color: #FFFFFF;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	position: relative;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio .first:before{
+	position: absolute;
+	content: "";
+	width: 13px;
+	height: 3px;
+	background-color: #ffb426;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -6.5px;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio .second{
+	display: block;
+	color: #eee;
+	margin-top: 16px;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio .first a{
+	text-decoration: none;
+	color: #FFFFFF;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_portfolio_list .list_inner .definition_portfolio .first a:hover{color: #ffb426;}
+.bitmarket_tm_portfolio_list .list_inner:hover .definition_portfolio{
+	top: 50%;
+	
+	opacity: 1;
+	visibility: visible;
+}
+.bitmarket_tm_portfolio_list .list_inner:hover .overlay{
+	background: #F87300;
+	background: -webkit-linear-gradient(135deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(135deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(135deg, #F87300, #BC3F06);
+	background: linear-gradient(135deg, #F87300, #BC3F06);
+}
+
+/*---------------------------------------------------*/
+/*	12) BITMARKET JOURNAL
+/*---------------------------------------------------*/
+
+.bitmarket_tm_journal_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 70px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_flipbox_fn{
+	width: 100%;
+	float: left;
+	clear: both;
+	min-height: 300px;
+	position: relative;
+	
+	perspective: 1000px; 
+	-webkit-perspective: 1000px;
+	
+	-webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.fn_flipbox_frontside{
+	width: 100%;
+	float: left;
+	position: relative;	
+	height: 400px;
+	
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+	
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	
+	-ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+}
+.fn_flipbox_backside{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+	
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+	
+	-ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+    -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+}
+.bitmarket_tm_flipbox_fn .inner{
+	position: absolute;
+    left: 0;
+	top: 0;
+    width: 100%;
+    padding: 15%;
+    outline: 1px solid transparent;
+    z-index: 10;
+	height: 400px;
+	
+    -webkit-perspective: inherit;
+    perspective: inherit;
+	
+    -webkit-transform: translateZ(60px) scale(0.94, 0.94);
+    -ms-transform: translateZ(60px) scale(0.94, 0.94);
+	transform: translateZ(60px) scale(0.94, 0.94);
+	
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.bitmarket_tm_flipbox_fn .o_color,
+.bitmarket_tm_flipbox_fn .o_image,
+.bitmarket_tm_flipbox_fn .o_gradient{
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 5;
+}
+.bitmarket_tm_flipbox_fn .o_color{background-color:rgba(0,0,0,.7);}
+.bitmarket_tm_flipbox_fn .o_gradient{
+	background: #F87300;
+	background: -webkit-linear-gradient(160deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(160deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(160deg, #F87300, #BC3F06);
+	background: linear-gradient(160deg, #F87300, #BC3F06);
+}
+.bitmarket_tm_flipbox_fn .o_image{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #aaa;
+}
+.bitmarket_tm_flipbox_fn .o_image.journal_first{background-image: url(../images/blog/1.jpg);}
+.bitmarket_tm_flipbox_fn .o_image.journal_second{background-image: url(../images/blog/2.jpg);}
+.bitmarket_tm_flipbox_fn .o_image.journal_third{background-image: url(../images/blog/3.jpg);}
+.bitmarket_tm_flipbox_fn:hover .fn_flipbox_frontside{
+	-webkit-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+}
+
+.bitmarket_tm_flipbox_fn:hover .fn_flipbox_backside{
+	-webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.bitmarket_tm_flipbox_fn h3{
+	font-size: 24px;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 30px;
+}
+.bitmarket_tm_flipbox_fn .title_journal{
+	color: #FFFFFF;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	position: relative;
+}
+.bitmarket_tm_flipbox_fn .title_journal:before{
+	position: absolute;
+	content: "";
+	width: 13px;
+	height: 3px;
+	background-color: #ffb426;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -6.5px;
+}
+.bitmarket_tm_flipbox_fn .definition_date{
+	display: block;
+	color: #fff;
+	margin-top: 16px;
+}
+.bitmarket_tm_flipbox_fn .definition_date a{
+	color: #ffb426;
+	text-decoration: none;
+	font-weight: 700;
+}
+.bitmarket_tm_flipbox_fn p{
+	font-size: 13px;
+	color: #eee;
+	margin-bottom: 25px;
+}
+.bitmarket_tm_flipbox_fn .link{
+	text-decoration: none;
+	color: #fff;
+	background-color: #BC3F06;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding: 13px 25px;
+	border-radius: 3px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_flipbox_fn .link:hover{
+	background-color: #fff;
+	color: #BC3F06;
+}
+.bitmarket_tm_flipbox_fn .link span{
+	display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+	position: relative;
+}
+.bitmarket_tm_flipbox_fn .link .arrow{
+    width: 20px;
+    height: 20px;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -10px;
+	transform: rotateY(180deg) rotateZ(0);
+	
+	-webkit-transition: right .3s ease;
+	   -moz-transition: right .3s ease;
+	    -ms-transition: right .3s ease;
+	     -o-transition: right .3s ease;
+	        transition: right .3s ease;
+}
+.bitmarket_tm_flipbox_fn .link:hover .arrow{right: 20px;}
+.bitmarket_tm_flipbox_fn .fn_flip{
+	width: 100%;
+	float: left;
+	clear: both;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+.bitmarket_tm_flipbox_fn .fn_flip > div{
+	opacity: 0;
+	visibility: hidden;
+	width: 100%;
+	padding: 15%;
+	
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.bitmarket_tm_flipbox_fn .in{
+	width: 100%;
+	position: absolute;
+	padding: 15%;
+	left: 0px;
+	top: 0px;
+	
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+}
+.bitmarket_tm_flipbox_fn[data-content-pos="topleft"] .in{top: 0;left: 0;text-align: left;}
+.bitmarket_tm_flipbox_fn[data-content-pos="topcenter"] .in{top: 0;left: 0;text-align: center;}
+.bitmarket_tm_flipbox_fn[data-content-pos="topright"] .in{top: 0;left: 0;text-align: right;}
+.bitmarket_tm_flipbox_fn[data-content-pos="middleleft"] .in{top: 50%;left: 0;text-align: left;transform: translateY(-50%);}
+.bitmarket_tm_flipbox_fn[data-content-pos="middlecenter"] .in{top: 50%;left: 0;text-align: center;transform: translateY(-50%);}
+.bitmarket_tm_flipbox_fn[data-content-pos="middleright"] .in{top: 50%;left: 0;text-align: right;transform: translateY(-50%);}
+.bitmarket_tm_flipbox_fn[data-content-pos="bottomleft"] .in{top: auto;left: 0;text-align: left;bottom: 0;}
+.bitmarket_tm_flipbox_fn[data-content-pos="bottomcenter"] .in{top: auto;left: 0;text-align: center;bottom: 0;}
+.bitmarket_tm_flipbox_fn[data-content-pos="bottomright"] .in{top: auto;left: 0;text-align: right;bottom: 0;}
+
+.bitmarket_tm_flipbox_fn[data-effect="lefttoright"] .fn_flipbox_frontside{
+	-ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.bitmarket_tm_flipbox_fn[data-effect="lefttoright"] .fn_flipbox_backside{
+	-ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.bitmarket_tm_flipbox_fn[data-effect="lefttoright"]:hover .fn_flipbox_frontside{
+	-ms-transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg); 
+	transform:rotateY(180deg);
+}
+.bitmarket_tm_flipbox_fn[data-effect="lefttoright"]:hover .fn_flipbox_backside{
+	-ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.bitmarket_tm_consultant_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_consultant_wrap .left_box{
+	width: 50%;
+	height: auto;
+	float: left;
+	position: relative;
+	background-color: #BC3F06;
+	padding: 70px 70px 45px 70px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_consultant_wrap .title_call{margin-bottom: 30px;}
+.bitmarket_tm_consultant_wrap .definition_call{
+	color: #eee;
+	margin-bottom: 50px;
+	font-size: 14px;
+}
+.bitmarket_tm_consultant_wrap .title_call span{
+	color: #fff;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: inline-block;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_consultant_wrap .title_call .yellow{color: #ffb426;}
+.bitmarket_tm_consultant_wrap .input_inner_wrap,
+.bitmarket_tm_consultant_wrap .input_row{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_consultant_wrap .input_row{margin-bottom: 16px;}
+.bitmarket_tm_consultant_wrap .input_row .first,
+.bitmarket_tm_consultant_wrap .input_row .second{
+	width: 50%;
+	height: auto;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_consultant_wrap .input_row .first{
+	float: left;
+	padding-right: 8px;
+}
+.bitmarket_tm_consultant_wrap .input_row .second{
+	float: right;
+	padding-left: 8px;
+}
+.bitmarket_tm_consultant_wrap .input_row input{
+	width: 100%;
+	height: auto;
+	min-width: auto !important;
+	border-radius: 3px;
+	color: #BC3F06;
+	font-weight: 500;
+}
+.bitmarket_tm_consultant_wrap .input_row input:focus{
+	background-color: #FFFFFF;
+	outline: none;
+}
+.bitmarket_tm_consultant_wrap .input_row textarea{
+	width: 100%;
+	height: 100px;
+	min-width: auto !important;
+	border-radius: 3px;
+	color: #BC3F06;
+	background-color: #fff;
+	font-weight: 500;
+}
+.bitmarket_tm_consultant_wrap .input_row textarea:focus{outline: none;}
+.bitmarket_tm_consultant_wrap .input_row .submit{
+	text-decoration: none;
+	color: #fff;
+	background-color: #ffb426;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding: 13px 25px;
+	border-radius: 3px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_consultant_wrap .input_row .submit:hover{
+	background-color: #fff;
+	color: #BC3F06;
+}
+.bitmarket_tm_consultant_wrap .right_box{
+	width: 50%;
+	height: auto;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../images/consultant/1.jpg);
+}
+.bitmarket_tm_consultant_wrap .right_box .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.1);
+}
+.bitmarket_tm_consultant_wrap .empty_notice{
+	color: #F9B1B2;
+	margin-bottom: 7px;
+	display: none;
+}
+.bitmarket_tm_consultant_wrap .contact_error{color: #F9B1B2;}
+.bitmarket_tm_consultant_wrap .returnmessage{
+	color:#8AB3F4;
+	margin-bottom: 7px;
+}
+
+/*---------------------------------------------------*/
+/*	13) BITMARKET PARTNERS
+/*---------------------------------------------------*/
+
+.bitmarket_tm_partners_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_universal_box_wrap .overlay_image.partners{background-image: url(../images/slider/2.jpg);}
+.bitmarket_tm_universal_box_wrap .overlay_color.partners{background-color: rgba(0,0,0,.7);}
+.bitmarket_tm_universal_box_wrap .content.partners{padding: 100px 0px 225px 0px;}
+.bitmarket_tm_partners_wrap .partners_title_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_partners_wrap .partners_title_wrap span{
+	color: #fff;
+	font-weight: 700;
+	font-family: "Montserrat";
+	font-size: 50px;
+	line-height: 1;
+	display: inline-block;
+	letter-spacing: -2px;
+}
+.bitmarket_tm_partners_wrap .partners_title_wrap .yellow{color: #ffb426;}
+.bitmarket_tm_partners_wrap .partners_list_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 75px 20px;
+	position: relative;
+	margin-top: -126px;
+	z-index: 333;
+	text-align: center;
+	border-radius: 3px;
+	
+	background: #F87300;
+	background: -webkit-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -o-linear-gradient(270deg, #F87300, #BC3F06);
+	background: -moz-linear-gradient(270deg, #F87300, #BC3F06);
+	background: linear-gradient(270deg, #F87300, #BC3F06);
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_partners_wrap .partners_list_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+	cursor: e-resize;
+}
+.bitmarket_tm_partners_wrap .partners_list_wrap ul li{margin: 0px;}
+
+/*---------------------------------------------------*/
+/*	14) BITMARKET CONTACT
+/*---------------------------------------------------*/
+
+.bitmarket_tm_separator{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	top: -6px;
+	transform: rotate(-180deg);
+}
+.bitmarket_tm_separator .svg{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.bitmarket_tm_contact_wrap,
+.bitmarket_tm_contact_wrap .contact_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_contact_wrap .shape_wrap{
+	position: absolute;
+	top: -33px;
+	left: -3px;
+	width: 101%;
+	height: 80px;
+	background-color: #0a1325;
+	transform: rotate(1.8deg);
+}
+.bitmarket_tm_contact_wrap{
+	padding: 350px 0px 100px 0px;
+	position: relative;
+	
+	background: #0a1325;
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li{
+	margin: 0px 0px 50px 0px !important;
+	float: left;
+	width: 33.3333%;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li:last-child{margin-bottom: 0px !important;}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li .inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding-right: 60px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li .logo_contact{margin-bottom: 30px;}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li .subtitle_logo{
+	margin-bottom: 30px;
+	color: #eee;
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li .read_more a{
+	text-decoration: none;
+	color: #fff;
+	background-color: #BC3F06;
+	display: inline-block;
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding: 13px 25px;
+	border-radius: 3px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_contact_wrap .contact_inner > ul > li .read_more a:hover{
+	background-color: #fff;
+	color: #0a1325;
+}
+.bitmarket_tm_contact_wrap .title_holder_contact{margin-bottom: 35px;}
+.bitmarket_tm_contact_wrap .title_holder_contact span{
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+	position: relative;
+}
+.bitmarket_tm_contact_wrap .title_holder_contact span:before{
+	position: absolute;
+	content: "";
+	width: 20px;
+	height: 3px;
+	background-color: #ffb426;
+	bottom: -11px;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li{
+	margin: 0px 0px 10px 0px;
+	padding-bottom: 10px;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li:last-child{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li span{display: block;}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li .title_blog{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li .title_blog a{
+	text-decoration: none;
+	color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li .title_blog a:hover{color: #ffb426}
+.bitmarket_tm_contact_wrap .contact_blog_list ul li .date_blog{color: #F5f5f5;}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li{margin: 0px 0px 10px 0px;}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li:last-child{margin-bottom: 0px;}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li label{
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li label i{color: #ffb426;}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li span{
+	color: #f5f5f5;
+	padding-left: 4px;
+}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li span a{
+	text-decoration: none;
+	color: #f5f5f5;;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_contact_wrap .contact_address_wrap ul li span a:hover{color: #ffb426;}
+
+/*---------------------------------------------------*/
+/*	15) BITMARKET FOOTER
+/*---------------------------------------------------*/
+
+.bitmarket_tm_footer_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	background-color: #0a1325;
+	border-top: 1px solid rgba(255,255,255,.2);
+	padding: 50px 0px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.bitmarket_tm_footer_wrap p{
+	color: #fff;
+	font-family: "Montserrat";
+}
+.bitmarket_tm_footer_wrap p a{
+	text-decoration: none;
+	color: #ffb426;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.bitmarket_tm_footer_wrap p a:hover{color: #fff;	}
+
+/*---------------------------------------------------*/
+/*	16) BITMARKET TO TOP
+/*---------------------------------------------------*/
+
+.bitmarket_tm_totop{
+	position: fixed;
+	bottom: 40px;
+	right: 55px;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	color: #FFFFFF;
+	z-index: 1000;
+	overflow: hidden;
+	background: #BC3F06;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;border: 1px solid rgba(255,255,255,.2);
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.bitmarket_tm_totop.opened{
+	opacity: 1;
+	visibility: visible;
+	bottom: 55px;
+}
+.bitmarket_tm_totop i{color: #fff;}
+
+/*---------------------------------------------------*/
+/*	17) BITMARKET MEDIA QUERIES (FOR SMALL DEVICES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1200px) {
+	.bitmarket_tm_list_wrap[data-column="5"] ul.total > li{width: 25%;}
+}
+@media (max-width: 1040px) {
+	.bitmarket_tm_trigger{display: block;}
+	.bitmarket_tm_navigation_wrap .nav_list_wrap{display: none;}
+	.bitmarket_tm_navigation_wrap .logo{position: relative;}
+	.bitmarket_tm_navigation_wrap .logo .light_logo{display: inline-block;}
+	.bitmarket_tm_navigation_wrap .logo .dark_logo{display: none;}
+	.bitmarket_tm_top_bar_wrap .top_bar_inner .left{width: 100%;text-align: center;margin-bottom: 5px;}
+	.bitmarket_tm_top_bar_wrap .top_bar_inner .right{width: 100%;text-align: center;}
+	.bitmarket_tm_navigation_wrap{background-color: rgba(255,255,255,1.00);padding: 30px 0px;}
+	.bitmarket_tm_top_bar_wrap{display: none;}
+	.bitmarket_tm_top_bar_wrap.mobile{display: block;background-color: inherit;border-top: 1px solid rgba(255,255,255,.2);padding-top: 40px;}
+	.bitmarket_tm_list_wrap[data-column="4"] ul.total > li{width: 33.3333%;}
+	.bitmarket_tm_list_wrap[data-column="5"] ul.total > li{width: 33.3333%;}
+	.bitmarket_tm_list_wrap .overlay_text{top: 52%;padding: 35px 30px;}
+	.bitmarket_tm_list_wrap .overlay_text .definition{margin-bottom: 20px;}
+	.bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="4"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="5"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="6"] .bitmarket_tm_counter_list li{width:33.3333%;}
+	.bitmarket_tm_about_wrap .right_box .inner{padding: 60px 50px 35px 50px;}
+	.bitmarket_tm_about_wrap .left_box{display: none;}
+	.bitmarket_tm_about_wrap .right_box{width: 100%;}
+	.bitmarket_tm_about_wrap .right_box .inner{padding: 60px 20px 35px 20px;}
+	.bitmarket_tm_about_skills_wrap .right_box{display: none;}
+	.bitmarket_tm_about_skills_wrap .left_box{width: 100%;}
+	.bitmarket_tm_about_skills_wrap .left_box_inner_wrap{padding: 60px 20px 35px 20px;}
+	.bitmarket_tm_portfolio_list > li{width: 33.3333%;}
+	.bitmarket_tm_consultant_wrap .right_box{display: none;}
+	.bitmarket_tm_consultant_wrap .left_box{width: 100%;padding: 60px 20px 35px 20px;}	
+}
+@media (max-width: 768px) {
+	.bitmarket_tm_navigation_wrap{background-color: rgba(255,255,255,1.00);padding: 25px 0px;}
+	.bitmarket_tm_list_wrap[data-column="3"] ul.total > li{width: 50%;}
+	.bitmarket_tm_list_wrap[data-column="4"] ul.total > li{width: 50%;}
+	.bitmarket_tm_list_wrap[data-column="5"] ul.total > li{width: 50%;}
+	.bitmarket_tm_list_wrap .overlay_text{top: 60%;}
+	.bitmarket_tm_get_quote_wrap .text_quote{width: 100%;text-align: center;margin-bottom: 25px;}
+	.bitmarket_tm_get_quote_wrap .quote_button{width: 100%;float: none;text-align: center;}
+	.bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="3"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="4"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="5"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="6"] .bitmarket_tm_counter_list li{width:50%;}
+	.bitmarket_tm_testimonial_wrap .main_testimonial_wrap{max-width: 440px;}
+	.bitmarket_tm_portfolio_list > li{width: 50%;}
+	.bitmarket_tm_contact_wrap .contact_inner > ul > li{width: 100%;}
+	.bitmarket_tm_contact_wrap .contact_inner > ul > li .inner{padding: 0px;}
+	.bitmarket_tm_pricing_wrap .bitcoin_list_wrap{width: 100%;margin-bottom: 30px;}
+	.bitmarket_tm_pricing_wrap .bitcoin_news_wrap{width: 100%;}
+}
+@media (max-width: 480px) {
+	.bitmarket_tm_navigation_wrap{background-color: rgba(255,255,255,1.00);padding: 20px 0px;}
+	.bitmarket_tm_top_bar_wrap ul li{margin: 0px;}
+	.bitmarket_tm_list_wrap[data-column="2"] ul.total > li{width: 100%;}
+	.bitmarket_tm_list_wrap[data-column="3"] ul.total > li{width: 100%;}
+	.bitmarket_tm_list_wrap[data-column="4"] ul.total > li{width: 100%;}
+	.bitmarket_tm_list_wrap[data-column="5"] ul.total > li{width: 100%;}
+	.bitmarket_tm_list_wrap .overlay_text{top: 64%;}
+	.bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="2"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="3"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="4"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="5"] .bitmarket_tm_counter_list li,
+	.bitmarket_tm_counter_wrap[data-col="6"] .bitmarket_tm_counter_list li{width:100%;}
+	.bitmarket_tm_testimonial_wrap .main_testimonial_wrap{max-width: 350px;}
+	.bitmarket_tm_portfolio_list{margin: 0px;}
+	.bitmarket_tm_portfolio_list > li{width: 100%;padding-left: 0px;}
+	.bitmarket_tm_portfolio_list > li:last-child{margin-bottom: 0px;}
+	.bitmarket_tm_consultant_wrap .input_row .first{width: 100%;margin-bottom: 16px;padding: 0px;}
+	.bitmarket_tm_consultant_wrap .input_row .second{width: 100%;padding: 0px;}
+}	
+@media (max-width: 360px){
+	.bitmarket_tm_list_wrap .overlay_text{top: 58%;}
+}
